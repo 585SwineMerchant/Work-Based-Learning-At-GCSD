@@ -8,3 +8,12 @@ Thumbs.db
 
 # Local preview tooling
 .claude/
+
+# Source/reference course materials kept at the project root (curriculum docs,
+# course modules, internal templates). Not public site content — if a document
+# should actually appear on the public site, add it under assets/files/ and
+# link it explicitly instead of relying on it being un-ignored here.
+/*.pdf
+/*.docx
+/*.xlsx
+/*.pptx
