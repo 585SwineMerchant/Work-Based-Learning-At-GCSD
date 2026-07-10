@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Greece Culinary Work-Based Learning — Public Documents Stylesheet
+   Shared styling for print-friendly one-pagers, flyers, and handouts.
+   Course project draft — SUNY Oswego CTE 566
+   ========================================================================== */
+
+:root {
+  --color-primary: #2e4630;
+  --color-primary-dark: #1e2f20;
+  --color-accent: #a5601c;
+  --color-accent-light: #f0dfc6;
+  --color-bg: #faf8f4;
+  --color-surface: #ffffff;
+  --color-text: #241f1a;
+  --color-text-muted: #55503f;
+  --color-border: #ddd6c6;
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --radius-md: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: #ddd6c6;
+  line-height: 1.55;
+}
+
+/* On-screen "page on a desk" preview. Neutralized in print (see below). */
+.doc-page {
+  max-width: 7.75in;
+  margin: 1.5rem auto;
+  background: var(--color-surface);
+  padding: 0.75in 0.75in 0.6in;
+  box-shadow: 0 8px 28px rgba(30, 25, 15, 0.22);
+  border-radius: 4px;
+}
+
+.doc-toolbar {
+  max-width: 7.75in;
+  margin: 0 auto;
+  padding: 0.75rem 0.1in 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doc-toolbar a {
+  color: var(--color-primary-dark);
+  font-size: 0.85rem;
+  text-decoration: underline;
+}
+
+.print-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.print-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+/* -----------------------------
+   Document header
+   ----------------------------- */
+.doc-header {
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.doc-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.35rem;
+}
+
+.doc-header h1 {
+  margin: 0 0 0.2rem;
+  font-size: 1.7rem;
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+}
+
+.doc-tagline {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* -----------------------------
+   Body content
+   ----------------------------- */
+h2 {
+  font-size: 1.05rem;
+  color: var(--color-primary-dark);
+  margin: 1.4rem 0 0.5rem;
+}
+
+h2:first-of-type {
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 0.6rem;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.lede {
+  font-size: 0.97rem;
+  color: var(--color-text-muted);
+}
+
+ul.doc-list {
+  list-style: none;
+  margin: 0 0 0.6rem;
+  padding: 0;
+  display: grid;
+  gap: 0.4rem;
+}
+
+ul.doc-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+ul.doc-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.doc-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.doc-columns h3 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-primary);
+  margin: 0 0 0.35rem;
+}
+
+.doc-callout {
+  background: var(--color-accent-light);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--color-primary-dark);
+  margin: 0.6rem 0;
+}
+
+/* -----------------------------
+   QR call-to-action block
+   ----------------------------- */
+.qr-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  margin: 1.1rem 0;
+  background: var(--color-bg);
+}
+
+.qr-cta img,
+.qr-cta .qr-placeholder {
+  flex-shrink: 0;
+  width: 1.1in;
+  height: 1.1in;
+}
+
+.qr-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  border: 2px dashed var(--color-border);
+  border-radius: 4px;
+  padding: 0.3rem;
+  background: #fff;
+}
+
+.qr-cta-text h3 {
+  margin: 0 0 0.2rem;
+  font-size: 0.95rem;
+  color: var(--color-primary-dark);
+}
+
+.qr-cta-text p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.qr-cta-url {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.82rem;
+  color: var(--color-primary-dark);
+  word-break: break-all;
+}
+
+/* -----------------------------
+   Disclaimer footer
+   ----------------------------- */
+.doc-disclaimer {
+  margin-top: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* -----------------------------
+   Print rules
+   ----------------------------- */
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .doc-page {
+    max-width: none;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .doc-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .doc-page {
+    padding: 1.25rem;
+    margin: 0.75rem;
+  }
+
+  .doc-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-cta {
+    flex-direction: column;
+    text-align: center;
+  }
+}

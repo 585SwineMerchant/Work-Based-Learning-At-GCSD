@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attention-Getter Slideshow | Greece Culinary Work-Based Learning</title>
+  <meta name="description" content="A looping, browser-based attention-getter slideshow for the Greece Culinary Work-Based Learning presentation table." />
+  <style>
+    :root {
+      --color-primary: #2e4630;
+      --color-primary-dark: #1e2f20;
+      --color-accent: #c98a2c;
+      --color-cream: #f0dfc6;
+      --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: var(--color-primary-dark);
+      font-family: var(--font-body);
+      overflow: hidden;
+    }
+
+    .no-print { }
+
+    .slideshow {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slide-viewport {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 5vh 8vw;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: #fff;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease;
+    }
+
+    .slide.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .slide-eyebrow {
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-cream);
+      margin-bottom: 1rem;
+    }
+
+    .slide-title {
+      font-size: clamp(2rem, 6vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 1.25rem;
+      max-width: 20ch;
+    }
+
+    .slide-message {
+      font-size: clamp(1.1rem, 2.6vw, 1.9rem);
+      max-width: 34ch;
+      color: rgba(255, 255, 255, 0.92);
+      margin: 0 0 1.5rem;
+    }
+
+    .slide-visual {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .slide-visual .dot {
+      width: clamp(10px, 1.6vw, 16px);
+      height: clamp(10px, 1.6vw, 16px);
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    .slide-visual .arrow {
+      font-size: clamp(1.2rem, 3vw, 2rem);
+      color: var(--color-cream);
+    }
+
+    .slide-talking-point {
+      font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+      font-style: italic;
+      color: var(--color-cream);
+      max-width: 40ch;
+      opacity: 0.85;
+    }
+
+    .slide-final .qr-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px dashed rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      padding: clamp(1rem, 3vw, 2rem) clamp(1.5rem, 5vw, 3rem);
+      margin-top: 0.5rem;
+    }
+
+    .slide-final .qr-placeholder {
+      width: clamp(90px, 14vw, 160px);
+      height: clamp(90px, 14vw, 160px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed rgba(255, 255, 255, 0.6);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.75);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .slide-final .qr-code-img {
+      width: clamp(90px, 14vw, 160px);
+      height: clamp(90px, 14vw, 160px);
+      background: #fff;
+      padding: 6px;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .slide-final .url {
+      font-family: "Consolas", "Courier New", monospace;
+      font-size: clamp(1rem, 2.2vw, 1.4rem);
+      color: #fff;
+      word-break: break-all;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .controls button {
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      padding: 0.55rem 1.1rem;
+      cursor: pointer;
+    }
+
+    .controls button:hover {
+      background: rgba(255, 255, 255, 0.24);
+    }
+
+    .controls button:focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    .dots-nav {
+      display: flex;
+      gap: 0.4rem;
+      margin: 0 0.5rem;
+    }
+
+    .dots-nav button {
+      width: 12px;
+      height: 12px;
+      padding: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      border: none;
+    }
+
+    .dots-nav button[aria-current="true"] {
+      background: var(--color-accent);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .exit-link {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: underline;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <a class="exit-link no-print" href="../../pages/forms-resources.html">Exit to Forms &amp; Resources</a>
+
+  <div class="slideshow" role="region" aria-roledescription="carousel" aria-label="Greece Culinary Work-Based Learning attention-getter slideshow">
+    <div class="slide-viewport" id="slide-viewport">
+
+      <section class="slide is-active" data-index="0" aria-hidden="false">
+        <p class="slide-eyebrow">Greece Culinary Work-Based Learning</p>
+        <h2 class="slide-title">From Classroom Kitchen to Career</h2>
+        <p class="slide-talking-point">This is a proposed pathway connecting our culinary classroom to real career experience.</p>
+      </section>
+
+      <section class="slide" data-index="1" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 2</p>
+        <h2 class="slide-title">What Is Culinary WBL?</h2>
+        <p class="slide-message">Structured, supervised, standards-aligned career prep &mdash; not just students getting jobs.</p>
+        <div class="slide-visual" aria-hidden="true">
+          <span>Classroom</span><span class="arrow">&rarr;</span><span>Lab</span><span class="arrow">&rarr;</span><span>SBE</span><span class="arrow">&rarr;</span><span>Employer</span>
+        </div>
+        <p class="slide-talking-point">It's built around supervision and learning goals at every stage, not just a placement.</p>
+      </section>
+
+      <section class="slide" data-index="2" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 3</p>
+        <h2 class="slide-title">Building on Real Strengths</h2>
+        <p class="slide-message">ServSafe, guest chefs, in-house catering, and curriculum-tied menu planning already happen here.</p>
+        <p class="slide-talking-point">This isn't a new idea from nothing &mdash; it formalizes what our program already does well.</p>
+      </section>
+
+      <section class="slide" data-index="3" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 4</p>
+        <h2 class="slide-title">Two Kinds of Skill</h2>
+        <p class="slide-message">Knife skills and food safety, alongside communication and teamwork.</p>
+        <div class="slide-visual" aria-hidden="true">
+          <span>Technical</span><span class="dot"></span><span>Employability</span>
+        </div>
+        <p class="slide-talking-point">Every experience is designed to build both.</p>
+      </section>
+
+      <section class="slide" data-index="4" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 5</p>
+        <h2 class="slide-title">School-Based Enterprise in Action</h2>
+        <p class="slide-message">Catering and food sales give students real production and service practice, safely, at school.</p>
+        <p class="slide-talking-point">This is where students practice real deadlines and customer service before an outside worksite.</p>
+      </section>
+
+      <section class="slide" data-index="5" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 6</p>
+        <h2 class="slide-title">Employers as Training Partners</h2>
+        <p class="slide-message">Not just job sites &mdash; partners who help shape student learning.</p>
+        <p class="slide-talking-point">An advisory board helps guide how local businesses get involved.</p>
+      </section>
+
+      <section class="slide" data-index="6" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 7</p>
+        <h2 class="slide-title">Families Are Part of the Process</h2>
+        <p class="slide-message">Communication, encouragement, and reviewing expectations together.</p>
+        <p class="slide-talking-point">Families help students build the habits WBL depends on.</p>
+      </section>
+
+      <section class="slide" data-index="7" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 8</p>
+        <h2 class="slide-title">A Role for Every Student</h2>
+        <p class="slide-message">Production, service, sanitation, marketing, costing &mdash; many roles, many strengths.</p>
+        <p class="slide-talking-point">Because there are so many roles in a real event, this works well for students with different needs and strengths.</p>
+      </section>
+
+      <section class="slide" data-index="8" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 9</p>
+        <h2 class="slide-title">Evidence, Not Just Intentions</h2>
+        <p class="slide-message">Evaluation is designed to document growth and guide improvement.</p>
+        <p class="slide-talking-point">We want to know this works &mdash; and keep improving it.</p>
+      </section>
+
+      <section class="slide slide-final" data-index="9" aria-hidden="true">
+        <p class="slide-eyebrow">Slide 10</p>
+        <h2 class="slide-title">Scan to Explore</h2>
+        <div class="qr-block">
+          <img src="qr-code.png" alt="QR code linking to the proposed Greece Culinary Work-Based Learning hub" class="qr-code-img" />
+          <p class="url">https://585swinemerchant.github.io/Work-Based-Learning-At-GCSD/</p>
+        </div>
+        <p class="slide-talking-point">Everything you just saw &mdash; and a lot more detail &mdash; is on that site.</p>
+      </section>
+
+    </div>
+
+    <div class="controls no-print">
+      <button type="button" id="prev-btn" aria-label="Previous slide">&larr; Prev</button>
+      <button type="button" id="play-pause-btn" aria-label="Pause slideshow">&#10073;&#10073; Pause</button>
+      <button type="button" id="next-btn" aria-label="Next slide">Next &rarr;</button>
+      <nav class="dots-nav" aria-label="Go to slide"></nav>
+    </div>
+    <p class="visually-hidden" id="slide-status" role="status" aria-live="polite"></p>
+  </div>
+
+  <script>
+    (function () {
+      var slides = Array.prototype.slice.call(document.querySelectorAll(".slide"));
+      var total = slides.length;
+      var current = 0;
+      var intervalMs = 7000;
+      var timer = null;
+      var playing = true;
+
+      var viewport = document.getElementById("slide-viewport");
+      var prevBtn = document.getElementById("prev-btn");
+      var nextBtn = document.getElementById("next-btn");
+      var playPauseBtn = document.getElementById("play-pause-btn");
+      var dotsNav = document.querySelector(".dots-nav");
+      var statusEl = document.getElementById("slide-status");
+
+      // Build slide indicator dots
+      slides.forEach(function (slide, i) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Slide " + (i + 1) + " of " + total);
+        dot.setAttribute("aria-current", i === 0 ? "true" : "false");
+        dot.addEventListener("click", function () {
+          goToSlide(i);
+          resetTimer();
+        });
+        dotsNav.appendChild(dot);
+      });
+      var dots = Array.prototype.slice.call(dotsNav.children);
+
+      function showSlide(index) {
+        slides.forEach(function (slide, i) {
+          var isActive = i === index;
+          slide.classList.toggle("is-active", isActive);
+          slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+        dots.forEach(function (dot, i) {
+          dot.setAttribute("aria-current", i === index ? "true" : "false");
+        });
+        statusEl.textContent = "Slide " + (index + 1) + " of " + total;
+      }
+
+      function goToSlide(index) {
+        current = (index + total) % total;
+        showSlide(current);
+      }
+
+      function nextSlide() {
+        goToSlide(current + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(current - 1);
+      }
+
+      function startTimer() {
+        stopTimer();
+        timer = setInterval(nextSlide, intervalMs);
+      }
+
+      function stopTimer() {
+        if (timer) {
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function resetTimer() {
+        if (playing) {
+          startTimer();
+        }
+      }
+
+      function setPlaying(next) {
+        playing = next;
+        if (playing) {
+          playPauseBtn.textContent = "❙❙ Pause";
+          playPauseBtn.setAttribute("aria-label", "Pause slideshow");
+          startTimer();
+        } else {
+          playPauseBtn.textContent = "▶ Play";
+          playPauseBtn.setAttribute("aria-label", "Play slideshow");
+          stopTimer();
+        }
+      }
+
+      prevBtn.addEventListener("click", function () {
+        prevSlide();
+        resetTimer();
+      });
+
+      nextBtn.addEventListener("click", function () {
+        nextSlide();
+        resetTimer();
+      });
+
+      playPauseBtn.addEventListener("click", function () {
+        setPlaying(!playing);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowRight") {
+          nextSlide();
+          resetTimer();
+        } else if (event.key === "ArrowLeft") {
+          prevSlide();
+          resetTimer();
+        }
+      });
+
+      showSlide(current);
+      startTimer();
+    })();
+  </script>
+</body>
+</html>
