@@ -17,3 +17,7 @@ Thumbs.db
 /*.docx
 /*.xlsx
 /*.pptx
+
+# Agent research notes extracted from internal curriculum source docs.
+# Reference material only — not for the public site/repo.
+/.agent-research/

@@ -29,10 +29,10 @@ single printed page (front side); layout/design is a separate export step
 
 The Culinary Pathway isn't starting from zero. It already includes in-house
 catering, guest chef speakers, curriculum-tied menu planning and costing, and
-an active culinary advisory board. One board member currently contracts
-roughly 5–6 catering jobs a year — a potential source of authentic, rotating
-student production and service opportunities as the program formalizes and
-expands.
+an active culinary advisory board. Through advisory board connections,
+roughly 5–6 real catering opportunities become available each year — a
+potential source of authentic, rotating student production and service
+experience as the program formalizes and expands.
 
 ### Ways to Participate
 
