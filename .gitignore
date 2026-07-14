@@ -8,16 +8,21 @@ Thumbs.db
 
 # Local preview tooling
 .claude/
+.agent-research/
 
-# Source/reference course materials kept at the project root (curriculum docs,
-# course modules, internal templates). Not public site content — if a document
-# should actually appear on the public site, add it under assets/files/ and
-# link it explicitly instead of relying on it being un-ignored here.
-/*.pdf
-/*.docx
-/*.xlsx
-/*.pptx
+# Office lock files, temporary files, and ordinary backup artifacts
+~$*
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.log
 
-# Agent research notes extracted from internal curriculum source docs.
-# Reference material only — not for the public site/repo.
-/.agent-research/
+# Source/reference course and district materials kept outside public Git.
+/source materials/
+
+# Completed or live records must never enter the public repository
+/completed-records/
+/live-operational-data/
