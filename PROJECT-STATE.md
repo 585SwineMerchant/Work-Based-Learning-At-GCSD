@@ -20,15 +20,15 @@ The ChatGPT Project chat is the continuity coordinator and recommends which envi
 
 **Last updated:** 2026-07-14  
 **Last working environment:** Desktop Work/Codex  
-**Last completed action:** Administratively relocated the seven current governing/core documents from the ignored `source materials/` directory into `pathway-documents/work-package-1-governance/` for durable repository control. Their filenames, versions, properties, content, and SHA-256 checksums were preserved byte-for-byte; no document was revised or archived.  
-**Files changed:** The existing Canon v3.0, Operating Principles v1.0, Master Document Register v1.0, and Books One through Four were relocated unchanged; this `PROJECT-STATE.md` handoff records the verified locations and remaining control work. No other source material or controlled document changed.  
-**Git status / commit:** The administrative relocation is recorded by the commit titled `Track governing Canon and four-book series`. Local `main` and `origin/main` are synchronized at completion of this operation.  
-**Pages deployment:** GitHub Actions run `29341073212` completed successfully on 2026-07-14. The deployed artifact contained only `index.html`, `pages/`, and `assets/`; all deployed pages and assets returned successfully; local navigation resolved; and `AGENTS.md`, `PROJECT-STATE.md`, `pathway-documents/`, `source materials/`, agent directories, and completed/live record locations were absent from the site.  
-**Decisions made:** The repository is public; GitHub Pages deploys only `index.html`, `pages/`, and `assets/`; `source materials/`, completed/live record locations, agent files, Office lock files, temporary files, and ordinary backups remain local and ignored; reviewed blank templates and controlled pathway deliverables under `pathway-documents/` are repository-public but excluded from the Pages artifact. The seven governing/core documents were current documents brought under repository control, so no versions were advanced and no archives were created. Production Control Log v5.0 was not recovered and was not fabricated.  
-**Unresolved issues:** Governance reconciliation remains pending for GOV-09's GOV-01 through GOV-07 ID wording, archive-filename wording, and access-versus-storage definitions. The Master Execution Matrix and Production Control Log still omit GOV-01 through GOV-07 from produced-file evidence. Owner visual QA review remains required for controlled documents and staged website pages; workbook structural validation passed, but visual Office-document QA remains pending. Current unresolved program decisions remain governed by GOV-10, the Master Execution Matrix, and the Production Control Log.  
-**Current authoritative versions affected:** Canon/GOV-01 v3.0; Operating Principles/GOV-02 v1.0; Book One/GOV-03 v4.0; Book Two/GOV-04 v4.1; Book Three/GOV-05 v4.0; Book Four/GOV-06 v4.0; Master Document Register/GOV-07 v1.0; GOV-12 v1.1; Master Execution Matrix v6.1; Production Control Log v6.1.  
-**Recommended next environment:** Desktop Work/Codex for the focused governance-reference reconciliation, followed by Microsoft Office desktop for owner visual QA.  
-**Recommended next task:** Correct the established GOV-01 through GOV-07 references and produced-file evidence through an approved GOV-09-compliant control pass, without changing the seven governing/core documents or current authorization limits.  
+**Last completed action:** Completed the authorized governance reconciliation. GOV-09 v1.1 now states the established GOV-01 through GOV-07 identities, the date-then-`-ARCHIVED` filename convention, and the distinction among access classification, repository tracking, and website publication. Master Execution Matrix v6.2 and Production Control Log v6.2 now record the seven tracked governing/core documents and their actual repository location without changing authorization or implementation status.
+**Files changed:** Archived GOV-09 v1.0, Master Execution Matrix v6.1, and Production Control Log v6.1; created GOV-09 v1.1, Master Execution Matrix v6.2, and Production Control Log v6.2; updated this `PROJECT-STATE.md` handoff. Canon/GOV-01, Operating Principles/GOV-02, Books One through Four/GOV-03 through GOV-06, Master Document Register/GOV-07, GOV-08, GOV-10, GOV-11, and GOV-12 were not changed.
+**Git status / commit:** The reconciliation is recorded by the commit titled `Reconcile governance document control`; no unrelated tracked changes are included.
+**Pages deployment:** The workflow remains limited to `index.html`, `pages/`, and `assets/`. The governance documents remain tracked in the public repository but outside the Pages artifact.
+**Decisions made:** GOV-01 through GOV-07 retain their existing filenames, versions, content, approval/status language, and SHA-256 checksums. GOV-09 v1.1 is an editorial clarification; Master Execution Matrix v6.2 and Production Control Log v6.2 are evidence/control updates. No PCL v5.0 was recovered or fabricated.
+**Unresolved issues:** Owner visual QA remains required for controlled documents and staged website pages. Workbook structural validation and visual rendering passed for Master Execution Matrix v6.2 and Production Control Log v6.2. GOV-09 v1.1 passed package/structure validation, but visual rendering was unavailable in this environment; Microsoft Word owner review remains pending. Current unresolved program decisions remain governed by GOV-10, Master Execution Matrix v6.2, and Production Control Log v6.2.
+**Current authoritative versions affected:** Canon/GOV-01 v3.0; Operating Principles/GOV-02 v1.0; Book One/GOV-03 v4.0; Book Two/GOV-04 v4.1; Book Three/GOV-05 v4.0; Book Four/GOV-06 v4.0; Master Document Register/GOV-07 v1.0; GOV-09 v1.1; GOV-12 v1.1; Master Execution Matrix v6.2; Production Control Log v6.2.
+**Recommended next environment:** Microsoft Office desktop for owner visual QA, with the ChatGPT Project chat used afterward for continuity and next-task selection.
+**Recommended next task:** Visually inspect GOV-09 v1.1 and the current controlled Office documents, record owner QA results through the existing control system, and preserve all current authorization limits.
 
 ## Verified Repository Facts
 
@@ -54,12 +54,12 @@ Verified current controlled/source versions located during the audit:
 - Book 4/GOV-06: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Book_4_Board_Proposal_Implementation_Plan_V4.0_Refined.docx`.
 - Master Document Register/GOV-07: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Master_Document_Register_v1.0.docx`.
 - GOV-08: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-08_Canonical-Glossary_v1.0_2026-07-12.docx`.
-- GOV-09: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-09_Document-Control-Versioning-Procedure_v1.0_2026-07-12.docx`.
+- GOV-09: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-09_Document-Control-Versioning-Procedure_v1.1_2026-07-14.docx`.
 - GOV-10: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-10_Program-Status-Authorization-Register_v4.0_2026-07-12.xlsx`.
 - GOV-11: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-11_Annual-Document-Review-Calendar_v1.0_2026-07-12.xlsx`.
 - GOV-12: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-12_Companion-Document-Map_v1.1_2026-07-12.docx`.
-- Master Execution Matrix: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_Master-Execution-Matrix_v6.1_2026-07-14.xlsx`.
-- Production Control Log: `pathway-documents/GCSD_CulinaryPathway_Production-Control-Log_v6.1_2026-07-14.xlsx`.
+- Master Execution Matrix: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_Master-Execution-Matrix_v6.2_2026-07-14.xlsx`.
+- Production Control Log: `pathway-documents/GCSD_CulinaryPathway_Production-Control-Log_v6.2_2026-07-14.xlsx`.
 
 Document-control corrections completed on 2026-07-14:
 
@@ -68,9 +68,13 @@ Document-control corrections completed on 2026-07-14:
 - Master Execution Matrix v6.0 was archived as `pathway-documents/_archive/GCSD_CulinaryPathway_Master-Execution-Matrix_v6.0_2026-07-12-ARCHIVED.xlsx`.
 - Master Execution Matrix v6.1 corrects the GOV-12 current filename to v1.1 and updates WEB-08/WEB-10 references from current structure placeholders to current conditional public-safe pages.
 - Current staging-page navigation/footer links now point to `WEB-08_External-Work-Based-Learning_v1.0_2026-07-12.html` and `WEB-10_Employer-Community-Partners_v1.0_2026-07-12.html`; the archived `-STRUCTURE` pages remain in `_archive`.
-- Workbook structural validation passed for Production Control Log v6.1 and Master Execution Matrix v6.1: worksheet names, formulas, validation, styles, merged cells, widths, row heights, print settings, freeze panes, and page settings matched the archived v6.0 workbooks. Visual workbook QA remains pending because rendering was unavailable in the current environment.
+- GOV-09 v1.0 was archived as `pathway-documents/_archive/GCSD_CulinaryPathway_GOV-09_Document-Control-Versioning-Procedure_v1.0_2026-07-12-ARCHIVED.docx`; GOV-09 v1.1 makes only the approved identity, archive-filename, and access/storage clarifications.
+- Master Execution Matrix v6.1 was archived as `pathway-documents/_archive/GCSD_CulinaryPathway_Master-Execution-Matrix_v6.1_2026-07-14-ARCHIVED.xlsx`; v6.2 adds GOV-01 through GOV-07 produced-file evidence and updates GOV-09 to v1.1.
+- Production Control Log v6.1 was archived as `pathway-documents/_archive/GCSD_CulinaryPathway_Production-Control-Log_v6.1_2026-07-14-ARCHIVED.xlsx`; v6.2 records the administrative relocation and control correction. Repository evidence still confirms only v1.0-v4.0 in the earlier PCL archive sequence; no v5.0 was verified or fabricated.
+- Structural validation passed for GOV-09 v1.1, Master Execution Matrix v6.2, and Production Control Log v6.2. Workbook worksheet names, formulas, validation, styles, merged cells, widths, existing row heights, print settings, freeze panes, page settings, and unchanged values match the archived v6.1 workbooks. Spreadsheet renders were visually inspected; GOV-09 visual rendering remains pending because the required Office converter was unavailable.
+- SHA-256 checksums for GOV-01 through GOV-07 match commit `a3d18ee`; none of the seven documents changed during this reconciliation.
 
-Verified work-package status from the Master Execution Matrix v6.1:
+Verified work-package status from the Master Execution Matrix v6.2:
 
 - Work Package 1: production complete; awaiting Kevin McCann owner visual QA review.
 - Work Package 2A and 2B Phase 1/2A: production complete; staged, not deployed; awaiting owner visual QA review.
