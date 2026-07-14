@@ -20,14 +20,14 @@ The ChatGPT Project chat is the continuity coordinator and recommends which envi
 
 **Last updated:** 2026-07-14  
 **Last working environment:** Desktop Work/Codex  
-**Last completed action:** Repository audit, privacy/publication boundary correction, Pages isolation, project-guidance creation, first infrastructure commit, and approved GOV-09-compliant controlled-document correction pass.  
-**Files changed:** `.github/workflows/deploy.yml`, `.gitignore`, `AGENTS.md`, `PROJECT-STATE.md`, legitimate controlled files under `pathway-documents/`, archived Production Control Log v6.0, archived Master Execution Matrix v6.0, new Production Control Log v6.1, new Master Execution Matrix v6.1, and current staging-page WEB-08/WEB-10 navigation/footer links.  
-**Git status / commit:** Local `main` is expected to be ahead of `origin/main` by two local commits after the controlled-document commit; nothing pushed. Infrastructure commit: `b7075cc2953d566072a69e76cce8329f48d76254`. Controlled-document commit message: `Add controlled Culinary Pathway document system`.  
+**Last completed action:** Repository audit, privacy/publication boundary correction, Pages isolation, project-guidance creation, approved GOV-09-compliant controlled-document correction pass, and reconciliation/removal of the superseded root `GAP-ANALYSIS.md` working file.  
+**Files changed:** `.github/workflows/deploy.yml`, `.gitignore`, `AGENTS.md`, `PROJECT-STATE.md`, legitimate controlled files under `pathway-documents/`, archived Production Control Log v6.0, archived Master Execution Matrix v6.0, new Production Control Log v6.1, new Master Execution Matrix v6.1, current staging-page WEB-08/WEB-10 navigation/footer links, and removal of superseded root `GAP-ANALYSIS.md`.  
+**Git status / commit:** Local `main` is expected to be ahead of `origin/main` by three local commits after the GAP reconciliation commit; nothing pushed. Infrastructure commit: `b7075cc2953d566072a69e76cce8329f48d76254`. Controlled-document commit: `6e60d8be5a5f700dc79a65f046690d07916af9e7`. GAP reconciliation commit message: `Reconcile and retire superseded gap analysis`.  
 **Decisions made:** The repository is public; GitHub Pages must deploy only `index.html`, `pages/`, and `assets/`; `source materials/`, completed/live record locations, agent files, Office lock files, temporary files, and ordinary backups remain ignored; reviewed blank templates and controlled pathway deliverables under `pathway-documents/` are repository-public but excluded from the Pages artifact. Production Control Log v5.0 was not recovered and was not fabricated.  
-**Unresolved issues:** Final disposition of `GAP-ANALYSIS.md`; owner visual QA review remains required for controlled documents and staged website pages before any publication or operational reliance.  
+**Unresolved issues:** Owner visual QA review remains required for controlled documents and staged website pages before any publication or operational reliance. Workbook structural validation passed, but visual workbook QA remains pending because Excel/LibreOffice rendering was unavailable in the desktop Work/Codex environment.  
 **Current authoritative versions affected:** GOV-12 v1.1; Master Execution Matrix v6.1; Production Control Log v6.1; WEB-08 v1.0; WEB-10 v1.0.  
 **Recommended next environment:** Desktop Work/Codex  
-**Recommended next task:** Review the two local commits, decide final disposition of `GAP-ANALYSIS.md`, then decide whether and when to push.  
+**Recommended next task:** Review the three local commits, perform any desired manual visual QA, then decide whether and when to push.  
 
 ## Verified Repository Facts
 
@@ -41,7 +41,7 @@ Verified on 2026-07-14 during the first Codex privacy and continuity audit:
 - The current public website source is the tracked static site at `index.html`, `pages/`, and `assets/`.
 - The full pathway production system exists locally under `pathway-documents/`. It was reviewed at the file/work-package level and is intended to be tracked in the controlled-document migration commit while remaining excluded from the GitHub Pages artifact.
 - `source materials/` exists locally and is currently untracked/ignored as course, district, and source-reference material.
-- `GAP-ANALYSIS.md` is tracked but deleted in the working tree; an identical copy exists at `source materials/GAP-ANALYSIS.md`. Preserve the deletion until Kevin decides how to handle it.
+- Root `GAP-ANALYSIS.md` was reconciled against GOV-10 v4.0, Master Execution Matrix v6.1, Production Control Log v6.1, GOV-12 v1.1, `PROJECT-STATE.md`, and current work-package files. It was removed from the current working tree as superseded working material; its historical Git version remains available. Current governance/control documents now carry the live issues, deferrals, owners, and dependencies.
 
 Verified current controlled/source versions located during the audit:
 
@@ -66,6 +66,7 @@ Document-control corrections completed on 2026-07-14:
 - Master Execution Matrix v6.0 was archived as `pathway-documents/_archive/GCSD_CulinaryPathway_Master-Execution-Matrix_v6.0_2026-07-12-ARCHIVED.xlsx`.
 - Master Execution Matrix v6.1 corrects the GOV-12 current filename to v1.1 and updates WEB-08/WEB-10 references from current structure placeholders to current conditional public-safe pages.
 - Current staging-page navigation/footer links now point to `WEB-08_External-Work-Based-Learning_v1.0_2026-07-12.html` and `WEB-10_Employer-Community-Partners_v1.0_2026-07-12.html`; the archived `-STRUCTURE` pages remain in `_archive`.
+- Workbook structural validation passed for Production Control Log v6.1 and Master Execution Matrix v6.1: worksheet names, formulas, validation, styles, merged cells, widths, row heights, print settings, freeze panes, and page settings matched the archived v6.0 workbooks. Visual workbook QA remains pending because rendering was unavailable in the current environment.
 
 Verified work-package status from the Master Execution Matrix v6.1:
 
