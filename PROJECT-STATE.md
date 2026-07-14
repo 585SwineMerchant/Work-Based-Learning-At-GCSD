@@ -20,15 +20,15 @@ The ChatGPT Project chat is the continuity coordinator and recommends which envi
 
 **Last updated:** 2026-07-14  
 **Last working environment:** Desktop Work/Codex  
-**Last completed action:** Pushed the three reviewed repository-migration commits to `origin/main` and verified the resulting GitHub Pages deployment. Repository guidance and the controlled Culinary Pathway document system are now tracked. The public site remained at its currently authorized content state.  
-**Files changed:** Migration commits track `.github/workflows/deploy.yml`, `.gitignore`, `AGENTS.md`, legitimate controlled files under `pathway-documents/`, the GOV-09-compliant v6.1 control-workbook corrections and archives, staging-page WEB-08/WEB-10 link corrections, removal of superseded root `GAP-ANALYSIS.md`, and this `PROJECT-STATE.md` continuity checkpoint.  
-**Git status / commit:** Migration commits `b7075cc2953d566072a69e76cce8329f48d76254`, `6e60d8be5a5f700dc79a65f046690d07916af9e7`, and `6db76055f23f53da874b0727467609a0c235f930` were pushed successfully. Local `main` and `origin/main` are synchronized at completion of this checkpoint operation.  
+**Last completed action:** Administratively relocated the seven current governing/core documents from the ignored `source materials/` directory into `pathway-documents/work-package-1-governance/` for durable repository control. Their filenames, versions, properties, content, and SHA-256 checksums were preserved byte-for-byte; no document was revised or archived.  
+**Files changed:** The existing Canon v3.0, Operating Principles v1.0, Master Document Register v1.0, and Books One through Four were relocated unchanged; this `PROJECT-STATE.md` handoff records the verified locations and remaining control work. No other source material or controlled document changed.  
+**Git status / commit:** The administrative relocation is recorded by the commit titled `Track governing Canon and four-book series`. Local `main` and `origin/main` are synchronized at completion of this operation.  
 **Pages deployment:** GitHub Actions run `29341073212` completed successfully on 2026-07-14. The deployed artifact contained only `index.html`, `pages/`, and `assets/`; all deployed pages and assets returned successfully; local navigation resolved; and `AGENTS.md`, `PROJECT-STATE.md`, `pathway-documents/`, `source materials/`, agent directories, and completed/live record locations were absent from the site.  
-**Decisions made:** The repository is public; GitHub Pages deploys only `index.html`, `pages/`, and `assets/`; `source materials/`, completed/live record locations, agent files, Office lock files, temporary files, and ordinary backups remain local and ignored; reviewed blank templates and controlled pathway deliverables under `pathway-documents/` are repository-public but excluded from the Pages artifact. Production Control Log v5.0 was not recovered and was not fabricated.  
-**Unresolved issues:** Owner visual QA review remains required for controlled documents and staged website pages before any publication or operational reliance. Workbook structural validation passed, but visual workbook QA remains pending because Excel/LibreOffice rendering was unavailable in the desktop Work/Codex environment. Current unresolved program decisions remain governed by GOV-10, the Master Execution Matrix, and the Production Control Log.  
-**Current authoritative versions affected:** GOV-12 v1.1; Master Execution Matrix v6.1; Production Control Log v6.1; WEB-08 v1.0; WEB-10 v1.0.  
-**Recommended next environment:** Microsoft Office desktop for owner visual QA, with results returned to Desktop Work/Codex for repository continuity.  
-**Recommended next task:** Perform visual QA of the v6.1 control workbooks and remaining controlled Office documents, record evidence-based findings, and preserve all current authorization limits.  
+**Decisions made:** The repository is public; GitHub Pages deploys only `index.html`, `pages/`, and `assets/`; `source materials/`, completed/live record locations, agent files, Office lock files, temporary files, and ordinary backups remain local and ignored; reviewed blank templates and controlled pathway deliverables under `pathway-documents/` are repository-public but excluded from the Pages artifact. The seven governing/core documents were current documents brought under repository control, so no versions were advanced and no archives were created. Production Control Log v5.0 was not recovered and was not fabricated.  
+**Unresolved issues:** Governance reconciliation remains pending for GOV-09's GOV-01 through GOV-07 ID wording, archive-filename wording, and access-versus-storage definitions. The Master Execution Matrix and Production Control Log still omit GOV-01 through GOV-07 from produced-file evidence. Owner visual QA review remains required for controlled documents and staged website pages; workbook structural validation passed, but visual Office-document QA remains pending. Current unresolved program decisions remain governed by GOV-10, the Master Execution Matrix, and the Production Control Log.  
+**Current authoritative versions affected:** Canon/GOV-01 v3.0; Operating Principles/GOV-02 v1.0; Book One/GOV-03 v4.0; Book Two/GOV-04 v4.1; Book Three/GOV-05 v4.0; Book Four/GOV-06 v4.0; Master Document Register/GOV-07 v1.0; GOV-12 v1.1; Master Execution Matrix v6.1; Production Control Log v6.1.  
+**Recommended next environment:** Desktop Work/Codex for the focused governance-reference reconciliation, followed by Microsoft Office desktop for owner visual QA.  
+**Recommended next task:** Correct the established GOV-01 through GOV-07 references and produced-file evidence through an approved GOV-09-compliant control pass, without changing the seven governing/core documents or current authorization limits.  
 
 ## Verified Repository Facts
 
@@ -40,18 +40,19 @@ Verified on 2026-07-14 during the first Codex privacy and continuity audit:
 - Repository visibility: public.
 - The GitHub Pages workflow previously uploaded the repository root (`path: "."`), which meant any tracked root content could enter the Pages artifact.
 - The current public website source is the tracked static site at `index.html`, `pages/`, and `assets/`.
-- The full pathway production system exists locally under `pathway-documents/`. It was reviewed at the file/work-package level and is intended to be tracked in the controlled-document migration commit while remaining excluded from the GitHub Pages artifact.
-- `source materials/` exists locally and is currently untracked/ignored as course, district, and source-reference material.
+- The full pathway production system, including the seven governing/core documents, is tracked under `pathway-documents/` and remains excluded from the GitHub Pages artifact.
+- `source materials/` remains local and ignored. It now contains only course, district, third-party, vendor, assessment, and reference sources; duplicate source workbooks; superseded working material; and three self-authored CTE 566 coursework outputs awaiting a separate public-repository decision.
 - Root `GAP-ANALYSIS.md` was reconciled against GOV-10 v4.0, Master Execution Matrix v6.1, Production Control Log v6.1, GOV-12 v1.1, `PROJECT-STATE.md`, and current work-package files. It was removed from the current working tree as superseded working material; its historical Git version remains available. Current governance/control documents now carry the live issues, deferrals, owners, and dependencies.
 
 Verified current controlled/source versions located during the audit:
 
-- Canon: `source materials/GCSD_Culinary_Pathway_Canon_v3.0.docx`.
-- Operating Principles: `source materials/GCSD_Culinary_Pathway_Operating_Principles_v1.0.docx`.
-- Book 1: `source materials/GCSD_Culinary_Pathway_Book_1_Program_Blueprint_V4.0_Refined.docx`.
-- Book 2: `source materials/GCSD_Culinary_Pathway_Book_2_Assessment_Evaluation_Continuous_Improvement_V4.1_Refined.docx`.
-- Book 3: `source materials/GCSD_Culinary_Pathway_Book_3_Operations_Manual_V4.0_Refined.docx`.
-- Book 4: `source materials/GCSD_Culinary_Pathway_Book_4_Board_Proposal_Implementation_Plan_V4.0_Refined.docx`.
+- Canon/GOV-01: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Canon_v3.0.docx`.
+- Operating Principles/GOV-02: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Operating_Principles_v1.0.docx`.
+- Book 1/GOV-03: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Book_1_Program_Blueprint_V4.0_Refined.docx`.
+- Book 2/GOV-04: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Book_2_Assessment_Evaluation_Continuous_Improvement_V4.1_Refined.docx`.
+- Book 3/GOV-05: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Book_3_Operations_Manual_V4.0_Refined.docx`.
+- Book 4/GOV-06: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Book_4_Board_Proposal_Implementation_Plan_V4.0_Refined.docx`.
+- Master Document Register/GOV-07: `pathway-documents/work-package-1-governance/GCSD_Culinary_Pathway_Master_Document_Register_v1.0.docx`.
 - GOV-08: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-08_Canonical-Glossary_v1.0_2026-07-12.docx`.
 - GOV-09: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-09_Document-Control-Versioning-Procedure_v1.0_2026-07-12.docx`.
 - GOV-10: `pathway-documents/work-package-1-governance/GCSD_CulinaryPathway_GOV-10_Program-Status-Authorization-Register_v4.0_2026-07-12.xlsx`.
