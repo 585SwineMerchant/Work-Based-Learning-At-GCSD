@@ -1,73 +1,29 @@
-# TODO — Content & Assets
+# Current Project Backlog
 
-Tracking list for future work on the Greece Culinary Work-Based Learning site.
-Nothing here is required for the site to function as a draft/prototype — these
-are the gaps to close before any real-world or district-facing use.
+The Master Execution Matrix is the authoritative task control. This file is a concise repository-level queue and must not create parallel ownership, status, or authorization.
 
-## Completed
+## Before the July 21, 2026 Jason/Corey review
 
-- [x] Static site scaffold (HTML/CSS/JS, nav, footer, accessibility baseline)
-- [x] Home page
-- [x] What Is WBL? page
-- [x] Student Pathway page
-- [x] Family Information page
-- [x] Employer Partners page
-- [x] School-Based Enterprise page
-- [x] Forms & Resources page
-- [x] Evaluation & Impact page
-- [x] Media Gallery page
-- [x] Contact / Get Involved page
+- [x] Correct GOV-07 so produced files, combined documents, locations, owners, and dispositions are current.
+- [x] Separate the planning-stage architecture review from the eventual operating calendar in GOV-11.
+- [x] Reconcile GOV-12, GOV-13, WEB-01, WEB-19, WEB-22, and WEB-24 with the current system.
+- [x] Prepare the working architecture-review packet and decision register.
+- [x] Create a staged two-path website preview without changing the live Pages source.
+- [x] Remove all Module 2 prototype links from the staged resource structure.
+- [ ] Kevin completes owner visual review of the meeting packet and current controlled Office files.
+- [ ] Jason and Corey confirm, revise, defer, or reject the architecture assumptions listed in the meeting packet.
 
-## Still To Do
+## After the review
 
-- [ ] Create actual public-facing PDFs/flyers (program one-pager, family FAQ,
-      employer flyer, student pathway flyer — full list on Forms & Resources)
-- [ ] Create student/family/employer forms (interest forms, permission form,
-      evaluation forms — full list on Forms & Resources)
-- [ ] Create presentation table mock-up
-- [ ] Create QR code(s) once deployed, pointing to Forms & Resources and/or
-      other key pages
-- [ ] Create slideshow loop for the presentation table attention-getter (see
-      Media Gallery)
-- [ ] Create Module 4 social media campaign content (see Media Gallery for
-      draft post categories and campaign theme)
-- [ ] Create Module 5 Board of Education presentation and companion materials
-      (slide deck, program impact one-pager, evaluation summary, employer
-      partnership summary, student pathway graphic)
-- [ ] Create evaluation plan/dashboards (see Evaluation & Impact)
-- [ ] Review/update content after Corey/Jason respond
-- [ ] Replace placeholders with district-approved language where appropriate
-- [ ] Add approved images/media only with permission (see Media Gallery
-      Important Draft Note — photos, videos, student work, names, logos, and
-      employer materials all require approval before publishing)
-- [ ] Commit and push this batch of changes when ready, then confirm GitHub
-      Pages deployment (repo is already initialized locally with a GitHub
-      Actions workflow — see README)
+- [ ] Enter meeting decisions in the appropriate controlled destinations; do not revise GOV-10 status without evidence of authorization.
+- [ ] Revise CMP-02, CUR-01/02/03, and KM materials only where Jason/Corey feedback requires it.
+- [ ] Confirm official course names, grades, credits, scheduling, staffing, coordinator authority, transportation realities, credentials, assessments, The Cottage/Olympia models, SkillsUSA status, and Board/curriculum pathway.
+- [ ] Determine whether the conditional senior external-WBL model and proposed 300-hour expectation remain in scope.
+- [ ] Decide which staged participant resources are approved, role-gated, restricted, or still in development.
+- [ ] Review the staged site before any decision to replace the currently authorized public source.
 
-## Branding
+## Later work already controlled elsewhere
 
-- [ ] Replace placeholder "GC" text mark and program name with approved
-      district/program logo (once available and cleared for use)
-- [ ] Confirm official program name/tagline with instructor or district contact
-      before any public-facing use beyond coursework
-
-## Functional / technical
-
-- [ ] Connect the Contact page form to a real submission method (district
-      email, form service, or backend) — currently a non-functional
-      placeholder (see `assets/js/main.js`)
-- [ ] Add real `alt` text once photos are added
-- [ ] Add captions/transcripts once video/audio is added
-- [ ] Run an accessibility check (e.g., axe, WAVE, or Lighthouse) once content
-      is finalized
-- [ ] Verify color contrast again if brand colors are ever changed from the
-      current placeholder palette
-
-## Source-handling reminder
-
-- Course PDFs, Module 1 assignments, internal templates, spreadsheets,
-  slideshows, and curriculum files in the project folder are source/context
-  files only (ignored via `.gitignore`). Do not link them directly from any
-  public page. Where the site references Module 1 community-plan or survey
-  work, it should describe a *future public-facing summary*, not link the
-  original assignment document.
+- Board presentation, script, and appendices remain governed by the Master Execution Matrix and GOV-10.
+- Evaluation, annual reporting, and implementation instruments remain governed by their register entries and dependencies.
+- CTE 566 packaging remains later coursework work; it is not the focus of the current program review.

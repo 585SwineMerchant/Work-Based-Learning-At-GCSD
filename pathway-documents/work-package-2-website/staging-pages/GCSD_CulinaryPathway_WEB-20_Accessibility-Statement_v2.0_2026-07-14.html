@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility Statement | GCSD Culinary Pathway</title>
+  <meta name="description" content="The GCSD Culinary Pathway's accessibility commitment, current status, how to get help, and the accessibility review checklist used before pages are published." />
+  <link rel="stylesheet" href="../../../assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/status-labels.css" />
+  <link rel="stylesheet" href="assets/staged-site.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--
+    STAGING FILE — WORK PACKAGE 2A
+    Register ID: WEB-20 (Accessibility Statement and Digital Accessibility
+    Audit). Per the reconciliation memo and task instructions, the
+    accessibility review checklist is included as an appendix section on
+    this same page rather than as a separate document.
+  -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="GCSD_CulinaryPathway_WEB-02_Home-Page_v2.0_2026-07-14.html">
+        <span class="brand-mark" aria-hidden="true">CP</span>
+        <span class="brand-text">
+          <span class="brand-title">GCSD Culinary Pathway</span>
+          <span class="brand-subtitle">Planning-Stage Program Site</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+        Menu
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul class="nav-list nav-list--focused">
+          <li><a href="GCSD_CulinaryPathway_WEB-02_Home-Page_v2.0_2026-07-14.html">Home</a></li>
+          <li><a href="GCSD_CulinaryPathway_WEB-03_Pathway-at-a-Glance_v2.0_2026-07-14.html">Explore the Culinary Pathway</a></li>
+          <li><a href="GCSD_CulinaryPathway_WEB-14_Program-Resources_v1.0_2026-07-14.html">Program Resources / I’m Participating</a></li>
+          <li><a href="GCSD_CulinaryPathway_WEB-13_Contact-Help-Concerns_v2.0_2026-07-14.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Our Commitment</span>
+        <h1>Accessibility Statement</h1>
+        <p class="lede">Working toward a site everyone can use &mdash; and telling you honestly where we are.</p>
+        <p>
+          The GCSD Culinary Pathway intends for this website, and the
+          Participant Resource Center that will be built alongside it, to
+          be usable by the widest possible range of visitors, including
+          people who use assistive technology such as screen readers,
+          switch devices, or keyboard-only navigation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="status-box status-box--planning">
+          <span class="status-box-label">Current Status</span>
+          <p>
+            <strong>This site is in the planning stage, and a formal
+            accessibility audit has not yet been completed.</strong> The
+            pages produced under Work Package 2A were built to follow the
+            practices below, but have not been tested against a
+            third-party conformance standard or by users of assistive
+            technology. Treat this statement as a description of intent
+            and current practice, not a conformance claim.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h2>What We Do Now</h2>
+          <ul class="checklist">
+            <li>Every page includes a "Skip to main content" link for keyboard users</li>
+            <li>Page structure uses semantic headings (H1, H2, H3) in order, not styled text pretending to be a heading</li>
+            <li>Interactive elements (links, buttons, form fields) have a visible, high-contrast focus state</li>
+            <li>Color is never the only way information is conveyed &mdash; status labels use both color and text/shape</li>
+            <li>Images that convey meaning use alternative text; decorative marks are hidden from assistive technology</li>
+            <li>Layouts are responsive and usable at different zoom levels and screen sizes</li>
+            <li>Navigation is consistent from page to page</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h2>Known Limitations</h2>
+          <ul class="checklist">
+            <li>No formal automated or manual accessibility audit has been completed against WCAG or another named standard</li>
+            <li>No testing has been done with actual assistive-technology users</li>
+            <li>Color contrast has not been independently verified against a formal ratio requirement</li>
+            <li>Pages produced in Work Package 2B (course, Gateway, and resource-center pages) have not yet been built or reviewed</li>
+            <li>Any document (Word or Excel) linked from a future Document Download Index may not yet be fully accessible in its native format</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h2>Getting Help</h2>
+          <p>
+            If you have trouble accessing information on this site, or
+            need it in an alternate format, use the Accessibility Help
+            route on the
+            <a href="GCSD_CulinaryPathway_WEB-13_Contact-Help-Concerns_v2.0_2026-07-14.html">Contact, Help, and Concerns page</a>.
+            That route is currently a labeled placeholder pending a real,
+            monitored contact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appendix: Accessibility Review Checklist -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Appendix</span>
+          <h2>Accessibility Review Checklist</h2>
+          <p>
+            The checklist below is the internal review pass every new or
+            revised public/participant page should go through before
+            publication. It supports, but does not replace, a future
+            formal accessibility audit.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <h3>Structure &amp; Navigation</h3>
+          <ul class="checklist">
+            <li>Page has exactly one H1, and headings descend in order without skipping levels</li>
+            <li>"Skip to main content" link is present and functions</li>
+            <li>Navigation order matches visual/reading order</li>
+            <li>Current page is indicated in navigation (aria-current)</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Color &amp; Contrast</h3>
+          <ul class="checklist">
+            <li>Text and background colors meet at least a 4.5:1 contrast ratio for body text (3:1 for large text)</li>
+            <li>Status labels (Active/Proposed/Conditional/Exploratory) are distinguishable by shape/text, not color alone</li>
+            <li>Focus indicators are visible against every background used on the page</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Keyboard &amp; Interaction</h3>
+          <ul class="checklist">
+            <li>Every interactive element is reachable and operable by keyboard alone</li>
+            <li>Tab order follows a logical reading sequence</li>
+            <li>No keyboard trap exists in any menu, form, or disclosure widget</li>
+            <li>Disclosure widgets (e.g., FAQ accordions) use native, accessible markup</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Images, Media &amp; Non-Text Content</h3>
+          <ul class="checklist">
+            <li>Meaningful images have descriptive alternative text</li>
+            <li>Purely decorative images/icons are marked aria-hidden</li>
+            <li>Any future video/audio has captions or a transcript before publication</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Forms &amp; Status Communication</h3>
+          <ul class="checklist">
+            <li>Every form field has a visible, programmatically associated label</li>
+            <li>Required fields and errors are announced to assistive technology, not shown by color alone</li>
+            <li>Status messages (e.g., placeholder/submission notices) use a live region where appropriate</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Documents Linked From This Site</h3>
+          <ul class="checklist">
+            <li>Linked Word/Excel documents open correctly and are labeled with file type and, where practical, size</li>
+            <li>Long PDFs (once produced) are checked for a tagged reading order before linking</li>
+            <li>Every document link's visible text describes its destination without relying on surrounding context alone</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3>Review Sign-Off</h3>
+          <p>
+            Before a page moves from Internal Review to Approved for
+            Planning Use per GOV-09, the Accessibility Lead confirms the
+            checklist above and records the review date in the page's
+            metadata block review-date field.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="page-meta-block">
+          <h2>About This Page</h2>
+          <dl class="page-meta-grid">
+            <dt>Register ID</dt><dd>WEB-20</dd>
+            <dt>Audience</dt><dd>All &mdash; general public, participants</dd>
+            <dt>Purpose</dt><dd>State the site's accessibility commitment and current status honestly, provide a help route, and document the review checklist used before pages publish.</dd>
+            <dt>Owner</dt><dd>Accessibility Lead</dd>
+            <dt>Version</dt><dd>2.0</dd>
+            <dt>Date</dt><dd>2026-07-14</dd>
+            <dt>Approval / Planning Status</dt><dd>Approved for Planning Use &mdash; planning document; not adopted district policy</dd>
+            <dt>Access Classification</dt><dd>PUBLIC (staged; not yet published)</dd>
+            <dt>Governing Source</dt><dd>Accessibility requirements; OPS-20 (not yet produced)</dd>
+            <dt>Review Date</dt><dd>Annually each July, or after any formal accessibility audit is completed</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>GCSD Culinary Pathway</strong><p>Planning-stage program proposal. Not adopted district policy.</p></div>
+      <nav aria-label="Footer">
+        <a href="GCSD_CulinaryPathway_WEB-03_Pathway-at-a-Glance_v2.0_2026-07-14.html">Explore</a>
+        <a href="GCSD_CulinaryPathway_WEB-14_Program-Resources_v1.0_2026-07-14.html">Program Resources</a>
+        <a href="GCSD_CulinaryPathway_WEB-20_Accessibility-Statement_v2.0_2026-07-14.html">Accessibility</a>
+        <a href="GCSD_CulinaryPathway_WEB-21_Privacy-Records-Notice_v2.0_2026-07-14.html">Privacy &amp; Records</a>
+        <a href="GCSD_CulinaryPathway_WEB-13_Contact-Help-Concerns_v2.0_2026-07-14.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/staged-site.js"></script>
+</body>
+</html>
