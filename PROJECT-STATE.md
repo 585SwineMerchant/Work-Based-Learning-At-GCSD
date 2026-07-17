@@ -1,6 +1,6 @@
 # CTE 566 Culinary Pathway Project State
 
-**Status date:** 2026-07-14
+**Status date:** 2026-07-17
 **Purpose:** Cross-application continuity handoff
 **Authority:** Working summary only. The Canon and current controlled documents prevail.
 
@@ -13,7 +13,13 @@ The repository is public. GitHub Pages deploys only `index.html`, `pages/`, and 
 ## Current Work Handoff
 
 **Last working environment:** Desktop Work/Codex
-**Last completed action:** Prepared the proposed Culinary Pathway architecture and document system for Kevin McCann's July 21, 2026 review with Jason Carlson and Corey Skinner. Implementation commit: `1989fc9 Prepare Culinary Pathway architecture review`.
+**Last completed action:** Completed the repository handoff for the staged Culinary Pathway website first-pass revision.
+
+### Staged Website Implementation Handoff
+
+Desktop Work/Codex completed the first-pass staged HTML rewrite on branch `codex-staged-website-first-pass`. Commit `995c6de Revise staged Culinary Pathway website` contains the staged HTML revision affecting only the 20 staged pages in `pathway-documents/work-package-2-website/staging-pages/`. Owner visual/content review is pending. Jason/Corey decisions and later controlled-document alignment remain pending, including course sequence, Kitchen Management, The Cottage scope, MCC mappings, Portrait language, SkillsUSA language, senior WBL authorization/workflow, and monitored contact/resource owners. Nothing has been pushed, merged, deployed, or published.
+
+Previous completed action: prepared the proposed Culinary Pathway architecture and document system for Kevin McCann's July 21, 2026 review with Jason Carlson and Corey Skinner. Implementation commit: `1989fc9 Prepare Culinary Pathway architecture review`.
 
 ### Meeting Material
 
@@ -92,7 +98,8 @@ No Board, curriculum, external-WBL, employer-partnership, PA-06, or PA-14 author
 ## Repository Facts
 
 - Root: `C:\Antigravity local\Grad School Project\CTE 566`.
-- Branch: `main`, tracking `origin/main`.
+- Current handoff branch: `codex-staged-website-first-pass`.
+- Default branch: `main`, tracking `origin/main`.
 - GitHub repository: `585SwineMerchant/Work-Based-Learning-At-GCSD` (public).
 - Live site source: `index.html`, `pages/`, and `assets/` only.
 - Controlled system: `pathway-documents/`, excluded from Pages.
