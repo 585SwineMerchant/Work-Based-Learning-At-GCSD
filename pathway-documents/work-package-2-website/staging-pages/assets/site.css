@@ -25,7 +25,11 @@
 .resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1rem; }
 .resource-card { display: flex; flex-direction: column; min-height: 14rem; padding: 1.25rem; border: 1px solid #d7ded8; border-radius: 6px; background: #fff; }
 .resource-card h2 { margin: 0 0 .55rem; font-size: 1.15rem; }
+.resource-card > .status-badge { margin-bottom: .75rem; }
 .resource-card p { flex: 1; }
+.resource-meta { display: grid; gap: .35rem; margin: 0 0 1rem; padding: 0; list-style: none; color: #4a5a50; font-size: .9rem; }
+.resource-meta strong { color: #173e31; }
+.resource-actions { display: flex; flex-wrap: wrap; gap: .55rem .9rem; margin-top: auto; }
 .resource-action { width: fit-content; font-weight: 750; color: #1c6349; }
 .source-note { font-size: .95rem; }
 .explore-nav .cta-inner { align-items: center; gap: 1.25rem; }
