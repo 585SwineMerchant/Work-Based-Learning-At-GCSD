@@ -1,113 +1,183 @@
 # GCSD Culinary Pathway Website Revision Handoff
 
 Date: 2026-07-17
-Branch: codex-staged-website-first-pass
-Base implementation commit: 995c6de Revise staged Culinary Pathway website
-First handoff commit: 428690d Add staged website handoff
-Second-pass commit: this commit records the owner-review second pass
+Branch: `codex-staged-website-first-pass`
+Status: Local staged implementation complete; owner visual/content review and district decisions remain pending.
 
-## Reader-Facing Changes Completed
+## Commit Chain
 
-- Removed public-facing language that described the site as a staging or editorial review artifact.
-- Rewrote affected headings and copy from the viewpoint of students, families, teachers, administrators, community members, and employers.
-- Standardized the Explore navigation banner with a stable three-control layout across Explore pages.
-- Rebuilt Pathway at a Glance with a three-by-three desktop Explore grid and stronger graduation/readiness continuity language.
-- Expanded Courses and Learning Environments with specific Culinary Arts and Nutrition I/II and Advanced Culinary content from current course sources.
-- Rebuilt the Gateway/Passport page around the four-stage relationship: instruction and practice, assessed evidence, Gateway completion, Passport record and next step.
-- Rewrote The Cottage page for readers without inside knowledge, including client-centered production, student-centered operation, rotating roles, and teacher responsibility.
-- Strengthened Kitchen Management with continued culinary practice, leadership, support boundaries, and the Mercantile pop-up/capstone concept.
-- Made Credentials, College Credit, and Graduation more specific while leaving exact MCC equivalencies and GCSD Profile of a Graduate attributes unresolved.
-- Clarified that senior external WBL is a developed proposal with drafted planning materials, not an active placement program.
-- Expanded employer/community participation routes, including the Mercantile capstone route.
-- Rebuilt Results and Accountability around student learning, learning-environment quality, and program quality without promising an annual report.
-- Rebuilt Program Resources and role pages so students, families, and employers can open actual local resources.
+- `995c6de Revise staged Culinary Pathway website` - first-pass revision of the 20 staged pages.
+- `428690d Add staged website handoff` - first repository handoff.
+- `2bf4174 Implement owner review website second pass` - owner-review editorial corrections, shared assets, and initial curated resources.
+- `bf2266f Polish owner review website third pass` - approved Explore corrections and hierarchical resource navigation.
+- `ca8dc84 Build complete student resource wave` - nine student resources and downloads.
+- `311d51b Build complete family resource wave` - five family resources and downloads.
+- `17810d0 Build complete employer resource wave` - seven Cottage/employer/community resources and downloads.
+- `ef5577e Build complete proposed senior WBL resource wave` - twelve proposed senior WBL review resources and downloads.
+- `3967eff Integrate completed public resource hubs` - WEB-14 through WEB-17 card, format, role, and status integration.
+- Final repository handoff and `PROJECT-STATE.md` update - recorded in the commit containing this report.
 
-## Exact Files Changed or Added
+Nothing in this chain has been pushed, merged, deployed, published, or connected to a live form.
 
-- Revised the 20 staged HTML pages in pathway-documents/work-package-2-website/staging-pages/.
-- Revised staged shared assets: assets/site.css, assets/site.js, assets/staged-site.css, assets/staged-site.js, assets/status-labels.css, and assets/resource-docs.css.
-- Added 21 curated public/review resource pages under pathway-documents/work-package-2-website/staging-pages/resources/.
-- Updated this handoff report.
+## Final Website Corrections
 
-## Actual Resources Now Available by Audience
+- WEB-05 now uses `Foundational Courses` instead of the inconsistent `Current Courses` heading.
+- WEB-07 restores stronger Kitchen Management coaching language: students may model practice, support less-experienced classmates, and provide constructive feedback, but they do not replace the teacher or become classroom managers.
+- WEB-11 states current college-credit opportunities directly for Culinary Arts and Nutrition I, Culinary Arts and Nutrition II, and Advanced Culinary Arts without attributing the fact to Kevin. Exact MCC details remain withheld pending confirmation.
+- WEB-11 treats GCSD's Profile of a Graduate as a broad district vision rather than a course requirement, credential map, or invented checklist.
+- Every individual resource now follows `Program Resources -> Role Hub -> Individual Resource` and returns to the correct Student, Family, or Employer and Mentor hub.
+- WEB-14 through WEB-17 now identify the intended audience, task, actual file formats, and proposed status only where that status is necessary.
 
-Student resources:
-- Student Skill Overview
-- Resume Preparation Guide
-- Career Goal Reflection
-- Student Reflection Log
-- Event Planning Checklist
-- Event Reflection Form
-- Costing and Menu Planning Template
-- Production Schedule Template
-- Student Role Assignment Template
-- Proposed Student WBL Interest Form, review copy only
-- Proposed Readiness Checklist, review copy only
-- Proposed Hours Log, review copy only
+## Files Changed In The Third Pass
 
-Family resources:
-- Family Information Sheet
-- Family FAQ
-- Student Support Checklist
-- Safety and Supervision Overview
-- Student Skill Overview
-- Resume Preparation Guide
-- Career Goal Reflection
+Staged pages and shared asset:
 
-Employer/community resources:
-- Employer and Community Overview
-- Employer FAQ
-- Cottage Request Information
-- Safety and Supervision Overview
-- Proposed Employer Interest Form, review copy only
-- Proposed Training Station Profile, review copy only
-- Proposed Hours Log, review copy only
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-05_Courses-Learning-Environments_v2.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-07_Leadership-Kitchen-Management_v2.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-11_Credentials-Recognition_v2.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-14_Program-Resources_v1.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-15_Student-Resources_v1.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-16_Family-Resources_v1.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/GCSD_CulinaryPathway_WEB-17_Employer-Mentor-Resources_v1.0_2026-07-14.html`
+- `pathway-documents/work-package-2-website/staging-pages/assets/site.css`
+- `pathway-documents/work-package-2-website/staging-pages/assets/resource-docs.css`
 
-## Resources Excluded
+All 33 individual resource pages are under `pathway-documents/work-package-2-website/staging-pages/resources/`. Their exact download files are under `resources/downloads/` and match the format matrix below.
 
-- Completed student records, Passport records, employability profiles, reflections, grades, portfolios, and completed hours logs: restricted educational records.
-- Completed employer evaluations, site reviews, partner agreements, incident reports, corrective-action records, and placement records: restricted partner/student/program records.
-- Legal/risk, insurance, transportation, accommodation, and administrative workflow documents: internal district operations and approval material.
-- Teacher operating calendars, document-control tools, ownership schedules, and staff-only procedures: restricted staff operations.
-- Module 2 public documents were not linked directly because many contain old course-project disclaimers, stale live-site links, old QR copy, or WBL-first framing that no longer matches the owner review. Curated local review copies were created instead.
+## Resource And Format Matrix
 
-## Validation Performed
+### Student Wave
 
-- Static validation passed for 20 staged pages and 21 curated resource pages.
-- Local link validation passed for staged pages, shared assets, and resource links.
-- Heading, landmark, duplicate-ID, placeholder-link, and WEB-18 public-reference checks passed.
-- Sitewide copy sweep passed for staging/editorial language and internal planning remnants.
-- Explore Previous, Next, and Overview sequence validation passed.
-- Rendered validation passed in Chrome at desktop, tablet, and mobile widths for all 41 pages/resources.
-- Explore navigation banner dimensions passed after shared CSS correction.
-- Pathway at a Glance nine-tile layout passed at desktop, tablet, and mobile widths.
-- Mobile menu open/Escape-close behavior passed.
-- All 21 resource pages were opened through rendered screenshots and inspected in a contact sheet.
-- `git diff --check` passed with line-ending warnings only.
+| Resource slug | Function | Formats |
+|---|---|---|
+| `student-skill-overview` | Technical, employability, client-centered, leadership, and pathway skill overview | HTML |
+| `resume-preparation-guide` | Culinary resume drafting, examples, action verbs, planning, and proofreading | HTML, PDF, DOCX |
+| `career-goal-reflection` | Interests, strengths, development needs, supports, and next actions | HTML, PDF, DOCX |
+| `student-reflection-log` | Repeatable reflection tied to role, task, feedback, evidence, course learning, and next step | HTML, PDF, DOCX |
+| `event-planning-checklist` | Full Cottage, event, pop-up, or capstone planning tool | HTML, PDF, DOCX |
+| `event-reflection-form` | Event outcome, quality, safety, teamwork, feedback, and improvement review | HTML, PDF, DOCX |
+| `costing-menu-planning-template` | Ingredient costing, recipe cost, cost per serving, food-cost percentage, allergens, and sourcing | HTML, PDF, XLSX |
+| `production-schedule-template` | Deadline-driven task, role, dependency, equipment, holding, quality, status, and contingency plan | HTML, PDF, DOCX |
+| `student-role-assignment-template` | Readiness-aligned roles, responsibilities, preparation, checkpoints, verification, and rotation | HTML, PDF, DOCX |
+
+### Family Wave
+
+| Resource slug | Function | Formats |
+|---|---|---|
+| `family-pathway-course-overview` | Existing program, course progression, learning environments, and proposed additions | HTML, PDF |
+| `family-information-sheet` | Concise pathway, Cottage, credentials, college-credit, support, communication, and privacy reference | HTML, PDF |
+| `family-faq` | Courses, Cottage, Gateways/Passport, credentials, proposed WBL, transportation, safety, and records | HTML, PDF |
+| `safety-supervision-overview` | Family-facing safety, supervision, readiness, transportation, and records boundaries | HTML, PDF |
+| `student-support-checklist` | Attendance, habits, communication, planning, transportation questions, and school review | HTML, PDF, DOCX |
+
+### Cottage And Employer/Community Wave
+
+| Resource slug | Function | Formats |
+|---|---|---|
+| `cottage-request-information` | Educational fit, lead time, scope, teacher review, readiness, communication, and no-guarantee boundary | HTML, PDF |
+| `employer-community-overview` | Current and proposed participation-route comparison | HTML, PDF |
+| `employer-faq` | Participation, Cottage, capstone, proposed WBL, safety, legal review, records, and next steps | HTML, PDF |
+| `partnership-interest-review-copy` | Offline discussion copy for a future monitored participation route | HTML, PDF, DOCX |
+| `proposed-training-station-overview` | Proposed senior WBL training-station purpose, sequence, mentor role, and approval conditions | HTML, PDF |
+| `employer-safety-supervision-overview` | Employer/mentor authority, approved duties, supervision, hazards, access, privacy, and records | HTML, PDF |
+| `capstone-mercantile-participation` | Possible feedback, guest, audience, event-support, and district-approved contribution roles | HTML, PDF |
+
+### Proposed Senior WBL Wave
+
+Each resource is marked `Proposed senior WBL resource - not yet active`, is not a current application or placement route, promises no placement, forbids public submission of completed records, and states that final use depends on district authorization and approved record systems.
+
+| Resource slug | Function | Formats |
+|---|---|---|
+| `proposed-student-wbl-interest-form` | Student interests, preparation, possible settings, barriers, supports, and learning goals | HTML, PDF, DOCX |
+| `proposed-readiness-checklist` | Course completion, competency evidence, professional preparation, logistics, and gap review | HTML, PDF, DOCX |
+| `proposed-training-station-profile` | Operations, contacts, supervision, schedule, duties, hazards, access, transportation, and compensation questions | HTML, PDF, DOCX |
+| `proposed-employer-interest` | Organization, contact, possible mentor, duties, schedule, capacity, and conditions | HTML, PDF, DOCX |
+| `proposed-training-plan-structure` | Objectives, duties, evidence, schedule, supervision, restrictions, review points, and signatures | HTML, PDF, DOCX |
+| `proposed-hours-log` | Dates, times, breaks, learning activity, mentor verification, reconciliation, and cumulative progress | HTML, PDF, DOCX |
+| `proposed-coordinator-check-in` | Hours, attendance, duties, supervision, safety, learning, supports, actions, and follow-up | HTML, PDF, DOCX |
+| `proposed-employer-feedback` | Rating guide, evidence, supports, training-plan progress, responsibility, and concern checks | HTML, PDF, DOCX |
+| `proposed-student-wbl-reflection` | Duties, objectives, evidence, feedback, safety, habits, judgment, responsibility, and next goal | HTML, PDF, DOCX |
+| `proposed-portfolio-organization` | Evidence inventory, permissions, feedback, growth, responsibility, and presentation readiness | HTML, PDF, DOCX |
+| `proposed-final-presentation` | Presentation plan, evidence, privacy, rehearsal, questions, revision, and review | HTML, PDF, DOCX |
+| `proposed-family-information-acknowledgment` | Course proposal, 300-hour structure, conditions, non-promises, questions, and future acknowledgment needs | HTML, PDF, DOCX |
+
+## Source Basis By Resource Group
+
+The working website revision brief supplied Kevin's current editorial direction. It was not treated as a new controlled authority. Status and public-boundary decisions were checked against the current Canon, Operating Principles, GOV-10, GOV-13, WEB-01, WEB-19, WEB-22, and WEB-24.
+
+- Student Skill Overview: CUR-01, CUR-02, CUR-05, CUR-06, CUR-08, CMP-01, CMP-03-08, current course outlines, the Culinary Pathway Skills Map, and the Employability Profile.
+- Resume Preparation Guide, Career-Goal Reflection, and Student Reflection Log: CMP-01, CUR-05, CUR-06, CUR-08, KM-10, and the corresponding historical Module 2 public documents as field/task references only.
+- Event Planning, Event Reflection, Costing/Menu Planning, Production Schedule, and Role Assignment: SBE-02-04-08-09-10-12-13-17, SBE-03-06-07-11, SBE-15-16-17, KM-02-05, KM-06-08, KM-07, the academic price worksheet source, and corresponding Module 2 templates as task references only.
+- Family resources: CUR-01, CUR-02, CUR-03, current course outlines, CUR-05, CMP-01, the current pathway presentation, the Cottage instructional guide, the public status controls, and corresponding Module 2 family references.
+- Cottage and community resources: SBE-02-04-08-09-10-12-13-17, SBE-03-06-07-11, KM-06-08, EMP-01, EMP-02, EMP-03, EMP-04, EMP-07-09, and the corresponding Module 2 employer/Cottage references.
+- Proposed senior WBL resources: EMP-02 through EMP-22 as applicable, OPS-04-14, OPS-19, the WP6 Legal/Policy Dependency Log, CMP-01, CMP-14, CUR-06, CUR-08, and KM-10. Legal, insurance, labor, transportation, compensation, authorization, and records questions remain conditions for district confirmation; no legal conclusion was invented.
+
+Historical Module 2 documents were used only to identify useful task structures and familiar fields. They were not used as current status authority and are not linked from the revised resource hubs.
+
+## Resources Excluded Or Deferred
+
+- Active public submission forms were not created because no approved destination and monitored owner were confirmed.
+- Completed Passport, employability, reflection, portfolio, evaluation, hours, agreement, site-review, incident, corrective-action, placement, accommodation, legal, insurance, or transportation records remain excluded from public pages.
+- WEB-18 remains on disk but is absent from public navigation and deployable public links; authenticated staff routing still needs an approved destination.
+- Exact MCC course mappings, credits, eligibility, registration, transcript, and articulation language remain deferred.
+- A GCSD Profile of a Graduate attribute map remains deferred because exact authoritative vocabulary and a Culinary-specific mapping were not confirmed.
+- No resource file was deleted in this pass. Every one of the 33 staged resource pages is linked through exactly one role hub.
+
+## Validation Results
+
+- Full static QA passed for 53 HTML files: 20 staged pages plus 33 individual resources.
+- All 550 local links and fragments resolved; no placeholder links, duplicate IDs, active collection controls, or WEB-18 public links were found.
+- Every page has one H1 and one main landmark. All individual resources have a breadcrumb and return to the correct role hub.
+- The nine-page Explore Previous/Next/Overview sequence passed in the intended order.
+- Copy sweeps found no public `Work Package`, source-document narration, internal GOV/CUR/PA IDs, whole-program `not launched` claim, `proposed name` for The Cottage, or `proposed course` claim for Kitchen Management.
+- All 32 PDFs are Letter size and contain nonblank text on every page.
+- All 21 DOCX files and the XLSX file are valid Office packages without macros; the workbook has no external link package and retains 44 formulas.
+- DOCX heading and exact table-geometry audits passed. Accessibility audits reported zero high-severity findings; medium findings were limited to layout/form/footer tables without semantic header-row flags.
+- Every generated DOCX was exported and visually inspected by page. Blank pages, split form rows, and caution-only trailing pages were corrected.
+- Browser checks passed at 390px mobile and 1440px desktop widths for the four hubs and representative long-form resources: no page-level horizontal overflow, card overflow, clipped controls, or active form fields.
+- The mobile menu opens, keyboard focus is visibly outlined, wide tables remain inside intentional scroll containers, and `git diff --check` passed with line-ending notices only.
 
 ## Remaining Kevin / Jason / Corey Decisions
 
-- Official 2026-27 course titles, credits, grade levels, prerequisites, building availability, and sequence.
-- Kitchen Management title, credit, schedule, grade placement, first implementation year, instructional role, and capstone responsibility.
-- The Cottage's current scope, public approval language, districtwide versus building-specific naming, and Olympia parallel language if needed.
+- Official 2026-27 course titles, credits, grades, prerequisites, building availability, and sequence.
+- Kitchen Management title, credit, schedule, grade placement, implementation details, instructional role, and capstone responsibility.
+- The Cottage's current scope, public approval language, districtwide versus building-specific naming, and any Olympia parallel language.
 - Exact MCC dual-enrollment mappings and current articulation agreement language.
-- Official GCSD Profile of a Graduate attributes and any Culinary Pathway mapping.
+- Official GCSD Profile of a Graduate vocabulary and whether a Culinary Pathway mapping should be created.
 - SkillsUSA status and permissible public language.
-- Senior external WBL authorization path, calendar, 300-hour weekly equivalent, staffing/coordinator authority, legal/insurance, transportation, compensation/pay boundaries, employer screening, and records workflow.
-- Monitored owners for public contact, Cottage inquiry, employer interest, accessibility help, and resource routes.
+- Senior external WBL authorization, course title/credit/sequence, calendar, weekly equivalent for the proposed 300 hours, staffing/coordinator authority, legal/insurance, working papers, labor and compensation boundaries, transportation, accessibility, employer screening, supervision, incident/change processes, and records workflow.
+- Monitored owners and approved destinations for contact, Cottage interest, partnership interest, accessibility help, and future participant resources.
 
-## MCC Equivalency Information Still Needed
+## MCC Information Still Needed
 
-Kevin confirmed current college-credit opportunity for Culinary Arts and Nutrition I, Culinary Arts and Nutrition II, and Advanced Culinary Arts. Exact MCC course numbers, titles, credits, eligibility rules, registration steps, transcript process, and current articulation language still need confirmation before publication.
+College-credit opportunities currently exist for Culinary Arts and Nutrition I, Culinary Arts and Nutrition II, and Advanced Culinary Arts. Exact MCC course numbers, titles, credits, eligibility requirements, registration steps, transcript procedures, and current articulation language must be confirmed before those details are published.
 
-## NYSED / GCSD Graduation Terminology
+## GCSD Profile Of A Graduate Information Still Needed
 
-Verified NYSED terminology used: Career and Technical Education pathway, Career Development and Occupational Studies pathway, CDOS Commencement Credential, 4+1 pathway option, NYSED-approved CTE program of study, and three-part technical assessment. GCSD public district materials reference a Profile of a Graduate, but the exact profile attributes were not available in searchable public page text during this pass. No GCSD profile mapping was invented.
+The staged site describes the Profile of a Graduate only as a broad district vision connected generally to communication, collaboration, problem-solving, responsibility, adaptability, professional conduct, and postsecondary readiness. Those terms are not presented as verified official attributes. Exact district vocabulary and any Culinary-specific relationship remain decisions for Kevin, Jason, and Corey.
 
-## Deployment Mapping Needed Later
+## Deployment Mapping Required Later
 
-The curated resources currently live under staging-pages/resources/ and use relative links that work locally from the staged pages. Before deployment, the Pages artifact must include the revised staged pages, staged assets, and resources directory, or these files must be mapped into the live pages/assets structure. The deployment workflow was not changed in this pass.
+The staged implementation is not in the current GitHub Pages artifact. A future authorized deployment must map all 20 staged pages, staged assets, the 33-resource directory, and all 54 download files into the approved Pages output. The deployment review must preserve the public/restricted boundary, remove WEB-18 from the public artifact, confirm monitored contact routes, and rerun the complete link/render/privacy audit against the actual artifact.
 
-## Publication Boundary
+## Model And Reasoning Configuration
 
-Nothing was pushed, merged, deployed, published, connected to forms, or changed in the controlled-document layer.
+The environment used GPT-5 Codex with high configured reasoning for all phases. Per-phase model/reasoning switching was not available.
+
+| Phase | Actual configuration |
+|---|---|
+| Source reconciliation and resource architecture | GPT-5 Codex, high reasoning |
+| Final website corrections | GPT-5 Codex, high reasoning |
+| Student resource production | GPT-5 Codex, high reasoning |
+| Family resource production | GPT-5 Codex, high reasoning |
+| Cottage and employer/community production | GPT-5 Codex, high reasoning |
+| Proposed senior WBL resources | GPT-5 Codex, high reasoning |
+| HTML/CSS/link integration | GPT-5 Codex, high reasoning |
+| Rendering, validation, and final editorial review | GPT-5 Codex, high reasoning |
+
+## Publication Boundary And Final Status
+
+- Controlled documents, the Canon, governance files, the four books, and source materials were not revised.
+- No public form, data collection route, external service, or staff-only destination was connected.
+- No push, merge, deployment, publication, pull request, or live-site change occurred.
+- After the final handoff commit and removal of temporary QA output, the local working tree is clean on `codex-staged-website-first-pass`.
