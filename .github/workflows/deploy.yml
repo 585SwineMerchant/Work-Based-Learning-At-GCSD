@@ -33,6 +33,8 @@ jobs:
           cp index.html _site/
           cp -R pages _site/
           cp -R assets _site/
+          mkdir -p _site/pathway-documents/work-package-2-website
+          cp -R pathway-documents/work-package-2-website/staging-pages _site/pathway-documents/work-package-2-website/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
