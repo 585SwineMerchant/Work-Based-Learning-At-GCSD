@@ -33,6 +33,9 @@ jobs:
           cp index.html _site/
           cp -R pages _site/
           cp -R assets _site/
+          mkdir -p _site/module-2-table-package
+          cp -R module-2-table-package/public-documents _site/module-2-table-package/
+          cp -R docs _site/
           mkdir -p _site/pathway-documents/work-package-2-website
           cp -R pathway-documents/work-package-2-website/staging-pages _site/pathway-documents/work-package-2-website/
       - name: Upload artifact
