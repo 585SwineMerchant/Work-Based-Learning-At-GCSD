@@ -383,9 +383,11 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline
 .display-evidence-line b { display: block; color: var(--green); font-size: clamp(1.1rem, 1.55vw, 1.65rem); }
 .display-system { display: grid; grid-template-rows: auto 1fr auto; }
 .system-wheel { position: relative; min-height: 190px; }
-.system-wheel::before { position: absolute; top: 50%; left: 50%; width: 56%; height: 56%; transform: translate(-50%,-50%); border: 2px dashed var(--green-mid); border-radius: 50%; content: ""; }
+.system-wheel::before { display: none; }
+.system-connectors { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; overflow: visible; }
+.system-connectors line { stroke: var(--green-mid); stroke-width: 3; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke; }
 .system-wheel > strong { position: absolute; top: 50%; left: 50%; z-index: 2; display: grid; place-items: center; width: 38%; aspect-ratio: 1; transform: translate(-50%,-50%); border-radius: 50%; background: var(--green); color: #fff; text-align: center; line-height: 1.1; }
-.system-wheel > strong small { color: var(--gold); font-size: 0.7em; }
+.system-wheel > strong small { display: block; max-width: 8em; color: var(--gold); font-size: 0.58em; line-height: 1.12; }
 .system-person { position: absolute; z-index: 3; padding: 0.45rem 0.6rem; border: 2px solid var(--rust); border-radius: 9px; background: #fff; color: var(--green-dark); font-size: clamp(0.7rem, 0.9vw, 0.95rem); font-weight: 900; text-align: center; }
 .system-person small { display: block; color: var(--muted); font-size: 0.78em; font-weight: 600; }
 .system-person.student { top: 3%; left: 50%; transform: translateX(-50%); }
