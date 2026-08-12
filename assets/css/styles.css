@@ -409,6 +409,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline
 .binder-title > span { color: #fff0d6; font-size: clamp(0.62rem, 0.72vw, 0.78rem); font-weight: 900; letter-spacing: 0.07em; text-transform: uppercase; }
 .binder-title h2 { margin-top: 0.25rem; color: #fff; font-size: clamp(1.25rem, 2vw, 2.2rem); }
 .binder-title p { margin: 0; color: #fff7ec; font-size: clamp(0.68rem, 0.83vw, 0.9rem); line-height: 1.4; }
+.binder-functions { display: grid; gap: 0.35rem; margin: 0.75rem 0 0; padding: 0; list-style: none; }
+.binder-functions li { padding-top: 0.35rem; border-top: 1px solid rgba(255,255,255,0.28); color: #fff7ec; font-size: clamp(0.61rem, 0.72vw, 0.77rem); line-height: 1.32; }
+.binder-functions b { display: inline-block; min-width: 5.2em; color: var(--gold); }
 .binder-tabs { display: grid; grid-template-columns: repeat(4, 1fr); }
 .binder-tabs article { position: relative; padding: clamp(0.75rem, 1.05vw, 1.1rem); border-left: 1px solid var(--line); }
 .binder-tabs article::before { position: absolute; top: 0; left: 0; width: 58%; height: 7px; background: var(--green-mid); content: ""; }
