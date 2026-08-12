@@ -1,8 +1,62 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Attention Getter | Greece Culinary WBL</title><meta name="description" content="Silent looping attention getter with QR code for Greece Culinary Work-Based Learning."><link rel="stylesheet" href="../assets/css/styles.css"></head>
-<body class="loop-page"><main class="loop" aria-live="polite">
-<section class="loop-slide"><img src="../assets/images/culinary-classroom.webp" alt="Culinary classroom learning"><div><span>Start in the classroom kitchen</span><strong>Safety. Sanitation. Skill.</strong></div></section>
-<section class="loop-slide"><img src="../assets/images/culinary-plated-food.webp" alt="Finished culinary production"><div><span>Build through real production</span><strong>Menus. Costing. Service.</strong></div></section>
-<section class="loop-slide"><img src="../assets/images/culinary-student-collage.webp" alt="Student culinary pathway work"><div><span>Move toward career</span><strong>Portfolio. Feedback. Opportunity.</strong></div></section>
-<section class="loop-slide qr-slide"><div class="qr-loop-panel"><div><span>Explore the full pathway</span><strong>Scan for Greece Culinary WBL.</strong><p>585swinemerchant.github.io/Work-Based-Learning-At-GCSD/</p></div><img src="../module-2-table-package/public-documents/qr-code.png" alt="QR code linking to the Greece Culinary Work-Based Learning website"></div></section>
-</main></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attention Getter | Greece Culinary WBL</title>
+  <meta name="description" content="Silent looping attention getter with QR code for Greece Culinary Work-Based Learning." />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body class="loop-page">
+  <button class="fullscreen-toggle" id="fullscreen-toggle" type="button" aria-pressed="false">
+    <span class="fullscreen-icon" aria-hidden="true">⛶</span>
+    <span class="fullscreen-label">Full screen</span>
+  </button>
+
+  <main class="loop" aria-live="polite">
+    <section class="loop-slide"><img src="../assets/images/culinary-classroom.webp" alt="Culinary classroom learning" /><div><span>Start in the classroom kitchen</span><strong>Safety. Sanitation. Skill.</strong></div></section>
+    <section class="loop-slide"><img src="../assets/images/culinary-plated-food.webp" alt="Finished culinary production" /><div><span>Build through real production</span><strong>Menus. Costing. Service.</strong></div></section>
+    <section class="loop-slide"><img src="../assets/images/culinary-student-collage.webp" alt="Student culinary pathway work" /><div><span>Move toward career</span><strong>Portfolio. Feedback. Opportunity.</strong></div></section>
+    <section class="loop-slide qr-slide"><div class="qr-loop-panel"><div><span>Explore the full pathway</span><strong>Scan for Greece Culinary WBL.</strong><p>585swinemerchant.github.io/Work-Based-Learning-At-GCSD/</p></div><img src="../module-2-table-package/public-documents/qr-code.png" alt="QR code linking to the Greece Culinary Work-Based Learning website" /></div></section>
+  </main>
+
+  <script>
+    (function () {
+      var button = document.getElementById("fullscreen-toggle");
+      var label = button.querySelector(".fullscreen-label");
+      var root = document.documentElement;
+      var canEnter = root.requestFullscreen || root.webkitRequestFullscreen;
+
+      if (!canEnter) {
+        button.hidden = true;
+        return;
+      }
+
+      function isFullscreen() {
+        return Boolean(document.fullscreenElement || document.webkitFullscreenElement);
+      }
+
+      function updateButton() {
+        var active = isFullscreen();
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+        label.textContent = active ? "Exit full screen" : "Full screen";
+      }
+
+      button.addEventListener("click", function () {
+        var action;
+        if (isFullscreen()) {
+          var exit = document.exitFullscreen || document.webkitExitFullscreen;
+          if (exit) action = exit.call(document);
+        } else {
+          action = canEnter.call(root);
+        }
+        if (action && typeof action.catch === "function") action.catch(function () {});
+      });
+
+      document.addEventListener("fullscreenchange", updateButton);
+      document.addEventListener("webkitfullscreenchange", updateButton);
+      updateButton();
+    }());
+  </script>
+</body>
+</html>
